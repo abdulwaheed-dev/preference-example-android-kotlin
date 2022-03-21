@@ -3,7 +3,7 @@ Preferences are used to communicate in between the activities i.e., from activit
 
 Through preferences, data can be also transfered in between the activities within the application.
 
-# Intent-Example
+# Intent 
 Intent is like a bridge in between the activities.
 
 It can also be used to communicate in between the activities as well as data transfer.
@@ -20,3 +20,8 @@ Steps for intent:
   ii. class of receiving activity
   
 2. starting activity via calling its method by passing inent object.
+
+# Using Camera Hardware
+1. Onject of intent, in which we will request permission for using phone camera
+2. starting activity via calling its method by passing inent object.
+3. here we are using camera on the button click
