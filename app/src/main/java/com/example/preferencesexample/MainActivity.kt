@@ -1,5 +1,6 @@
 package com.example.preferencesexample
 
+import android.content.Intent
 import android.content.SharedPreferences
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
@@ -35,5 +36,18 @@ class MainActivity : AppCompatActivity() {
 
         editor.putString("username",username)
         editor.commit()
+        //editor.apply()
+
+        //Starting Main Activity
+        //Explicit Intent - Steps
+
+        //1- Object of Intent
+        val intent : Intent = Intent(this, userScreen::class.java)
+
+        intent.putExtra("username","Abdul Waheed")
+        //intent.putExtra("id",)
+
+        //2- start activity
+        startActivity(intent)
     }
 }
