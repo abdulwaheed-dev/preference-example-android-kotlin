@@ -23,5 +23,6 @@ Steps for intent:
 
 # Using Camera Hardware
 1. Onject of intent, in which we will request permission for using phone camera
-2. starting activity via calling its method by passing inent object.
-3. here we are using camera on the button click
+2. first we check that permission is granted or not. If permission is granted camera will be opened, else it will request permission for camara.
+3. starting activity via calling its method by passing inent object.
+4. here we are using camera on the button click
