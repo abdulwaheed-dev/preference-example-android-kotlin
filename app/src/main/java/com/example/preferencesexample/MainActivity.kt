@@ -4,6 +4,7 @@ import android.content.Intent
 import android.content.SharedPreferences
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import android.provider.MediaStore
 import android.view.View
 import android.widget.Button
 import android.widget.EditText
@@ -29,25 +30,33 @@ class MainActivity : AppCompatActivity() {
     }
 
     fun clickMe(view : View){
-        var usernameBox = findViewById<EditText>(R.id.editTextTextPersonName)
-        val username : String = usernameBox.text.toString()
+//        var usernameBox = findViewById<EditText>(R.id.editTextTextPersonName)
+//        val username : String = usernameBox.text.toString()
+//
+//        val editor : SharedPreferences.Editor = prefs.edit()
+//
+//        editor.putString("username",username)
+//        editor.commit()
+//        //editor.apply()
+//
+//        //Starting Main Activity
+//        //Explicit Intent - Steps
+//
+//        //1- Object of Intent
+//        val intent : Intent = Intent(this, userScreen::class.java)
+//
+//        intent.putExtra("username","Abdul Waheed")
+//        //intent.putExtra("id",)
+//
+//        //2- start activity
+//        startActivity(intent)
 
-        val editor : SharedPreferences.Editor = prefs.edit()
-
-        editor.putString("username",username)
-        editor.commit()
-        //editor.apply()
-
-        //Starting Main Activity
-        //Explicit Intent - Steps
-
-        //1- Object of Intent
-        val intent : Intent = Intent(this, userScreen::class.java)
-
-        intent.putExtra("username","Abdul Waheed")
-        //intent.putExtra("id",)
-
-        //2- start activity
+        //=================================
+        //camera starting on this button click
+        //steps..
+        //1 object of inent
+        var intent = Intent(MediaStore.ACTION_IMAGE_CAPTURE)
+        //2 start
         startActivity(intent)
     }
 }
